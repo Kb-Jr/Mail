@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Mail{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'mail/styles.css' %}">
+        {% block script %}
+        {% endblock %}
+        
+        <style>
+            body {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 20px;
+            }
+
+            .wrap-card {
+            margin:auto;
+            margin-top: 40px;
+            padding: 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0px 0px 12px -2px rgba(173,173,173,0.8);
+            max-width: 50%;}
+
+            .container-card {
+            margin:auto;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0px 0px 12px -2px rgba(173,173,173,0.8);
+            max-width: 80%;
+            max-height: 70%;
+
+        }
+
+        </style>
+    </head>
+
+
+    <body>
+        <div class="container">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
